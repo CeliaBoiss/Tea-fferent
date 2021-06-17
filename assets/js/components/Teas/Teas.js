@@ -4,10 +4,10 @@ import TeasSummary from "./TeasSummary";
 
 const Teas = () => {
     return (
-        <div>
+        <React.Fragment>
             <TeasSummary />
             <TeasList />
-        </div>
+        </React.Fragment>
     );
 };
 

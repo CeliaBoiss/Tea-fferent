@@ -3,25 +3,27 @@ import {Route, Switch,Redirect, Link, withRouter} from 'react-router-dom';
 import Users from './Users';
 import Posts from './Posts';
 import Teas from './Teas/Teas';
+
+import '../../css/App.css';
     
 const App = () => {
     return (
         <React.Fragment>
             <nav>
-                <Link to={"/"}> Symfony React Project </Link>
-                <div>
-                    <ul>
-                        <li>
-                            <Link to={"/posts"}> Posts </Link>
-                        </li>
-                        <li>
-                            <Link to={"/users"}> Users </Link>
-                        </li>
-                        <li>
-                            <Link to={"/teas"}> Teas </Link>
-                        </li>
-                    </ul>
-                </div>
+                <ul className="nav-ul">
+                    <li className="nav-li main-title">
+                        <Link to={"/"}>Tea-fferent</Link>
+                    </li>
+                    <li className="nav-li">
+                        <Link to={"/posts"}> Posts </Link>
+                    </li>
+                    <li className="nav-li">
+                        <Link to={"/users"}> Users </Link>
+                    </li>
+                    <li className="nav-li">
+                        <Link to={"/teas"}> Teas </Link>
+                    </li>
+                </ul>
             </nav>
             <Switch>
                 <Redirect exact from="/" to="/users" />

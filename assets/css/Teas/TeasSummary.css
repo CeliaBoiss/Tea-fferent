@@ -1,0 +1,15 @@
+.summary-wrapper {
+    display: flex;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 17vh;
+}
+
+.summary-title, .summary-paragraph {
+    text-align: center;
+}
+
+.summary-title {
+    margin-bottom: 15px;
+}
