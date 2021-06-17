@@ -1,0 +1,13 @@
+.wrapper-list {
+    display: flex;
+}
+
+.teas-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    list-style-type: none;
+    width: 100%;
+    margin: 20px;
+}

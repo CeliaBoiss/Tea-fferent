@@ -6,7 +6,7 @@ import Teas from './Teas/Teas';
     
 const App = () => {
     return (
-        <div>
+        <React.Fragment>
             <nav>
                 <Link to={"/"}> Symfony React Project </Link>
                 <div>
@@ -29,7 +29,7 @@ const App = () => {
                 <Route path="/posts" component={Posts} />
                 <Route path="/teas" component={Teas} />
             </Switch>
-        </div>
+        </React.Fragment>
     );
 };
     
