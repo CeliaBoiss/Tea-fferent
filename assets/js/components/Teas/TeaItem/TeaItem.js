@@ -4,18 +4,23 @@ import Card from '../../UI/Card';
 import '../../../../css/Teas/TeaItem.css';
 
 const TeaItem = (props) => {
-    const price = `${props.tea.price}€`;
+    const price = `${props.tea.price}€ / sachet`;
 
     return (
         <Card>
-            <li key={props.tea.id}>
+            <li className="tea-item" key={props.tea.id}>
                 <h3>{props.tea.name}</h3>
                 <p>{props.tea.type}</p>
                 <div className="tea-photo">
                     <img src={props.tea.photo} />
                 </div>                
-                <p>{props.tea.description}</p>
-                <p>{price}</p>
+                <p className="tea-item-paragraph">{props.tea.description}</p>
+                <div className="tea-item-buy">
+                    <p className="tea-item-price">{price}</p>
+                    <form className="tea-item-form">
+                        <button>Add to Cart</button>
+                    </form>
+                </div>
             </li>
         </Card>
     );

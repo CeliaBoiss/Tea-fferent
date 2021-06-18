@@ -1,5 +1,6 @@
 import React from 'react';
 import TeaItem from './TeaItem/TeaItem';
+
 import '../../../css/Teas/TeasList.css';
 
 const DUMMY_TEAS = [

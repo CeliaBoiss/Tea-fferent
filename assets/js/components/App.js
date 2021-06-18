@@ -14,13 +14,13 @@ const App = () => {
                     <li className="nav-li main-title">
                         <Link to={"/"}>Tea-fferent</Link>
                     </li>
-                    <li className="nav-li">
+                    <li className="nav-li menu-link">
                         <Link to={"/posts"}> Posts </Link>
                     </li>
-                    <li className="nav-li">
+                    <li className="nav-li menu-link">
                         <Link to={"/users"}> Users </Link>
                     </li>
-                    <li className="nav-li">
+                    <li className="nav-li menu-link">
                         <Link to={"/teas"}> Teas </Link>
                     </li>
                 </ul>
