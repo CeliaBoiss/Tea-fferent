@@ -30,7 +30,8 @@
     width: 100%;
 }
 
-.tea-item-price, .tea-item-form {
+.tea-item-price {
     width: 50%;
     text-align: center;
+    margin-top: 15px;
 }

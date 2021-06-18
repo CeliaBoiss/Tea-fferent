@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from '../../UI/Card';
+import TeaItemForm from './TeaItemForm';
 
 import '../../../../css/Teas/TeaItem.css';
 
@@ -17,9 +18,7 @@ const TeaItem = (props) => {
                 <p className="tea-item-paragraph">{props.tea.description}</p>
                 <div className="tea-item-buy">
                     <p className="tea-item-price">{price}</p>
-                    <form className="tea-item-form">
-                        <button>Add to Cart</button>
-                    </form>
+                    <TeaItemForm />
                 </div>
             </li>
         </Card>

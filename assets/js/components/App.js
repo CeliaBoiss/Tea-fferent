@@ -3,6 +3,8 @@ import {Route, Switch,Redirect, Link, withRouter} from 'react-router-dom';
 import Users from './Users';
 import Posts from './Posts';
 import Teas from './Teas/Teas';
+import Cart from './Cart/Cart';
+import CartButton from'./Layout/CartButton';
 
 import '../../css/App.css';
     
@@ -24,12 +26,14 @@ const App = () => {
                         <Link to={"/teas"}> Teas </Link>
                     </li>
                 </ul>
+                <Link to={"/cart"}> <CartButton /> </Link>
             </nav>
             <Switch>
                 <Redirect exact from="/" to="/users" />
                 <Route path="/users" component={Users} />
                 <Route path="/posts" component={Posts} />
                 <Route path="/teas" component={Teas} />
+                <Route path="/cart" component={Cart} />
             </Switch>
         </React.Fragment>
     );

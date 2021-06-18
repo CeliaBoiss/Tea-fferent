@@ -13,7 +13,7 @@ nav {
 
 .nav-ul {
     display: flex;
-    width: 100%;
+    width: 75%;
     height: 95%;
 }
 
@@ -27,8 +27,11 @@ nav {
     width: 70px;
 }
 
-.nav-li:hover {
+.is-active, .nav-li:hover {
     background-color: #df5b59a6;
+}
+
+.nav-li:hover {
     cursor: pointer;
 }
 
