@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Card from '../../UI/Card';
 import TeaItemForm from './TeaItemForm';
+import CartContext from '../../../store/cart-context';
 
 import '../../../../css/Teas/TeaItem.css';
 
 const TeaItem = (props) => {
+    const cartCtx = useContext(CartContext);
     const price = `${props.tea.price}€ / sachet`;
+
+    const addToCartHandler = (amount) => {
+        cartCtx.addItem({
+            id: props.tea.id,
+            name: props.tea.name,
+            amount: amount,
+            price: props.tea.price,
+            type: props.tea.type
+        });
+    };
 
     return (
         <Card>
@@ -18,7 +30,7 @@ const TeaItem = (props) => {
                 <p className="tea-item-paragraph">{props.tea.description}</p>
                 <div className="tea-item-buy">
                     <p className="tea-item-price">{price}</p>
-                    <TeaItemForm />
+                    <TeaItemForm id={props.tea.id} onAddToCart={addToCartHandler} />
                 </div>
             </li>
         </Card>

@@ -2,15 +2,16 @@ import React from 'react';
 import {Route, Switch,Redirect, Link, withRouter} from 'react-router-dom';
 import Users from './Users';
 import Posts from './Posts';
-import Teas from './Teas/Teas';
-import Cart from './Cart/Cart';
-import CartButton from'./Layout/CartButton';
+import Teas from './components/Teas/Teas';
+import Cart from './components/Cart/Cart';
+import CartButton from'./components/Layout/CartButton';
+import CartProvider from './store/CartProvider';
 
-import '../../css/App.css';
+import '../css/App.css';
     
 const App = () => {
     return (
-        <React.Fragment>
+        <CartProvider>
             <nav>
                 <ul className="nav-ul">
                     <li className="nav-li main-title">
@@ -35,7 +36,7 @@ const App = () => {
                 <Route path="/teas" component={Teas} />
                 <Route path="/cart" component={Cart} />
             </Switch>
-        </React.Fragment>
+        </CartProvider>
     );
 };
     
