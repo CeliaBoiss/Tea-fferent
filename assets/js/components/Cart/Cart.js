@@ -9,11 +9,24 @@ import '../../../css/Cart/Cart.css';
 const Cart = (props) => {
     const cartCtx = useContext(CartContext);
 
-    const cartItems = cartCtx.items.map((item) =>
-        <CartItem key={item.id} item={item} />
-    );
+    const totalAmount = cartCtx.totalAmount.toFixed(2);
 
-    const cartContent = cartCtx.items.length > 0 ? cartItems : <p>Your cart is empty.</p>;
+    const addToCartHandler = (item) => {
+        cartCtx.addItem({...item, amount: 1});
+    };
+
+    const removeFromCartHandler = (id) => {
+        cartCtx.removeItem(id);
+    };
+
+    const cartItems = cartCtx.items.map((item) =>
+        <CartItem
+            key={item.id}
+            item={item}
+            onAdd={addToCartHandler.bind(null, item)}
+            onRemove={removeFromCartHandler.bind(null, item.id)}
+        />
+    );
 
     return (
         <PageWrapper>
@@ -30,10 +43,10 @@ const Cart = (props) => {
                             </tr>
                         </thead>
                         <tbody>
-                            {cartContent}
+                            {cartItems}
                         </tbody>
                     </table>
-                    <p className="cart-order-price">Total order : {cartCtx.totalAmount} €</p>
+                    <p className="cart-order-price">Total order : {totalAmount} €</p>
                 </Card>
             </div>
         </PageWrapper>

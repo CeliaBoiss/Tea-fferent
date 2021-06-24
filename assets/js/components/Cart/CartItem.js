@@ -3,7 +3,7 @@ import React from 'react';
 import '../../../css/Cart/CartItem.css';
 
 const CartItem = (props) => {
-    const totalPrice = props.item.price * props.item.amount;
+    const totalPrice = (props.item.price * props.item.amount);
 
     return (
         <tr className="cart-item">

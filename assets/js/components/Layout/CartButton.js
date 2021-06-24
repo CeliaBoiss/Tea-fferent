@@ -7,11 +7,13 @@ import cartLogo from '../../../images/cartLogo.png';
 const CartButton = () => {
     const cartCtx = useContext(CartContext);
 
+    const totalAmount = cartCtx.totalAmount.toFixed(2);
+
     return (
         <button className="cart-button" type="button">
             <span><img src={cartLogo} /></span>
             <span className="cart-button-text">Your Cart</span>
-            <span className="cart-button-badge">{cartCtx.totalAmount} €</span>
+            <span className="cart-button-badge">{totalAmount} €</span>
         </button>
     );
 };
