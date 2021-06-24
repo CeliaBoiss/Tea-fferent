@@ -15,7 +15,8 @@ const TeaItem = (props) => {
             name: props.tea.name,
             amount: amount,
             price: props.tea.price,
-            type: props.tea.type
+            type: props.tea.type,
+            photo: props.tea.photo
         });
     };
 
