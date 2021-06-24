@@ -1,0 +1,32 @@
+.cart-button {
+    cursor: pointer;
+    background-color: #dd5c59;
+    border: 0.16em solid rgba(255,255,255,0);
+    border-color: #41363a;
+    border-radius: 30px;
+    font-weight: bold;
+    padding: 0.40rem 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.cart-button span {
+    color: #41363a;
+}
+
+.cart-button:hover,
+.cart-button:active {
+    background-color: #abe979;
+}
+
+.cart-button-text {
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+}
+
+.cart-button-badge {
+    background-color: #f9cf9d;
+    padding: 0.25rem 1rem;
+    border-radius: 25px;
+    font-weight: bold;
+}

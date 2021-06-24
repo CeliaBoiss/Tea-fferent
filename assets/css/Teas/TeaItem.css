@@ -1,0 +1,37 @@
+.tea-item {
+    height: 500px;
+    position: relative;
+}
+
+.tea-item > * {
+    padding-bottom: 10px;
+}
+
+.tea-photo {
+    width: 100%;
+    max-height: 12rem;
+    overflow: hidden;
+}
+
+.tea-photo img {
+    width: 100%;
+}
+
+.tea-item-paragraph {
+    padding-top: 10px;
+    text-align: justify;
+}
+
+.tea-item-buy {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.tea-item-price {
+    width: 50%;
+    text-align: center;
+    margin-top: 15px;
+}

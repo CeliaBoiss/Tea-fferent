@@ -1,11 +1,14 @@
 import React from 'react';
+import PageWrapper from '../UI/PageWrapper';
+import TeasList from './TeasList';
 import TeasSummary from "./TeasSummary";
 
 const Teas = () => {
     return (
-        <div>
+        <PageWrapper>
             <TeasSummary />
-        </div>
+            <TeasList />
+        </PageWrapper>
     );
 };
 
