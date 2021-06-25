@@ -15,7 +15,7 @@ const TeaItem = (props) => {
             name: props.tea.name,
             amount: amount,
             price: props.tea.price,
-            type: props.tea.type,
+            type: props.tea.type.name,
             photo: props.tea.photo
         });
     };
@@ -24,7 +24,7 @@ const TeaItem = (props) => {
         <Card>
             <li className="tea-item" key={props.tea.id}>
                 <h3>{props.tea.name}</h3>
-                <p>{props.tea.type}</p>
+                <p>{props.tea.type.name}</p>
                 <div className="tea-photo">
                     <img src={props.tea.photo} />
                 </div>                

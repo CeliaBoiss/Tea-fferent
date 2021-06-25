@@ -38,9 +38,10 @@ class Tea
     private string $photo;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\ManyToOne(targetEntity=TeaType::class, inversedBy="teas")
+     * @ORM\JoinColumn(nullable=false)
      */
-    private string $type;
+    private $type;
 
     public function getId(): ?int
     {
@@ -95,12 +96,12 @@ class Tea
         return $this;
     }
 
-    public function getType(): ?string
+    public function getType(): ?TeaType
     {
         return $this->type;
     }
 
-    public function setType(string $type): self
+    public function setType(?TeaType $type): self
     {
         $this->type = $type;
 
